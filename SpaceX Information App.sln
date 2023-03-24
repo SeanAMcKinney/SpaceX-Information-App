@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{725FC298-9DAC-49BD-8DE7-4CE7ECC29968}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Layer", "Service Layer", "{6F39CD61-1964-45C7-B103-605F4D75706F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User Interface Layer", "User Interface Layer", "{B065D1F3-6933-48B8-931C-D9D3017304C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXDAL", "SpaceXDAL\SpaceXDAL.csproj", "{B1AD601A-458E-4FD5-8A7C-9FC580006825}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1AD601A-458E-4FD5-8A7C-9FC580006825} = {725FC298-9DAC-49BD-8DE7-4CE7ECC29968}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7900E1D7-810F-4918-992A-092D801729BD}
+	EndGlobalSection
+EndGlobal
