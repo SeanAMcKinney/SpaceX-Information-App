@@ -1,10 +1,10 @@
 ﻿namespace SpaceXDAL.EntityModles
 {
 
-    public class Ships
-    {
-        public ShipsEM[] Property1 { get; set; }
-    }
+    //public class Ships
+    //{
+    //    public ShipsEM[] Property1 { get; set; }
+    //}
 
     public class ShipsEM
     {

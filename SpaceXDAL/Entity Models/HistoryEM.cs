@@ -3,10 +3,10 @@
 namespace SpaceXDAL.EntityModles
 {
 
-    public class History
-    {
-        public HistoryEM[] Property1 { get; set; }
-    }
+    //public class History
+    //{
+    //    public HistoryEM[] Property1 { get; set; }
+    //}
 
     public class HistoryEM
     {

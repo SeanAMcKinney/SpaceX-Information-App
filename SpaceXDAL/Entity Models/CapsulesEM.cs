@@ -1,10 +1,10 @@
-﻿namespace SpaceXDAL.EntityModles
+﻿namespace SpaceXDAL.EntityModels
 {
 
-    public class Capsules
-    {
-        public CapsulesEM[] Property1 { get; set; }
-    }
+    //public class Capsules
+    //{
+    //    public CapsulesEM[] Property1 { get; set; }
+    //}
 
     public class CapsulesEM
     {

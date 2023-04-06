@@ -1,10 +1,10 @@
 ﻿namespace SpaceXDAL.EntityModles
 {
 
-    public class Crew
-    {
-        public CrewEM[] Property1 { get; set; }
-    }
+    //public class Crew
+    //{
+    //    public CrewEM[] Property1 { get; set; }
+    //}
 
     public class CrewEM
     {

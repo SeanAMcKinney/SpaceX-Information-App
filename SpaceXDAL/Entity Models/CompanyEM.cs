@@ -1,6 +1,5 @@
 ﻿namespace SpaceXDAL.EntityModles
 {
-
     public class CompanyEM
     {
         public Headquarters headquarters { get; set; }

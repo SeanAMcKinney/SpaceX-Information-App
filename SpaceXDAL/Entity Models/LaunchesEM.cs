@@ -3,10 +3,10 @@
 namespace SpaceXDAL.EntityModles
 {
 
-    public class Launches
-    {
-        public LaunchesEM[] Property1 { get; set; }
-    }
+    //public class Launches
+    //{
+    //    public LaunchesEM[] Property1 { get; set; }
+    //}
 
     public class LaunchesEM
     {

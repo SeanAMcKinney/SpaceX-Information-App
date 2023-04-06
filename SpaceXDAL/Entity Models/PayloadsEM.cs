@@ -3,10 +3,10 @@
 namespace SpaceXDAL.EntityModles
 {
 
-    public class Payloads
-    {
-        public PayloadsEM[] Property1 { get; set; }
-    }
+    //public class Payloads
+    //{
+    //    public PayloadsEM[] Property1 { get; set; }
+    //}
 
     public class PayloadsEM
     {

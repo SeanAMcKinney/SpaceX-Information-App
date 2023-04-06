@@ -1,10 +1,9 @@
 ﻿namespace SpaceXDAL.EntityModles
 {
-
-    public class Dragons
-    {
-        public DragonsEM[] Property1 { get; set; }
-    }
+    //public class Dragons
+    //{
+    //    public DragonsEM[] Property1 { get; set; }
+    //}
 
     public class DragonsEM
     {

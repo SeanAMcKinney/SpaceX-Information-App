@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace SpaceXDAL.EntityModles
 {
 
-    public class Rockets
-    {
-        public RocketsEM[] Property1 { get; set; }
-    }
+    //public class Rockets
+    //{
+    //    public RocketsEM[] Property1 { get; set; }
+    //}
 
     public class RocketsEM
     {

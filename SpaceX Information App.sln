@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User Interface Layer", "Use
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXDAL", "SpaceXDAL\SpaceXDAL.csproj", "{B1AD601A-458E-4FD5-8A7C-9FC580006825}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXConsole", "SpaceXConsole\SpaceXConsole.csproj", "{437E8085-4DCC-4754-93E3-10776BDD81D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXSL", "SpaceXSL\SpaceXSL.csproj", "{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +25,21 @@ Global
 		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1AD601A-458E-4FD5-8A7C-9FC580006825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437E8085-4DCC-4754-93E3-10776BDD81D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437E8085-4DCC-4754-93E3-10776BDD81D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437E8085-4DCC-4754-93E3-10776BDD81D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437E8085-4DCC-4754-93E3-10776BDD81D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B1AD601A-458E-4FD5-8A7C-9FC580006825} = {725FC298-9DAC-49BD-8DE7-4CE7ECC29968}
+		{080A7427-84A1-4AD2-BEB8-3FEDF878F18E} = {6F39CD61-1964-45C7-B103-605F4D75706F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7900E1D7-810F-4918-992A-092D801729BD}

@@ -3,10 +3,10 @@
 namespace SpaceXDAL.EntityModles
 {
 
-    public class StarlinkEM
-    {
-        public Starlink[] Property1 { get; set; }
-    }
+    //public class StarlinkEM
+    //{
+    //    public Starlink[] Property1 { get; set; }
+    //}
 
     public class Starlink
     {

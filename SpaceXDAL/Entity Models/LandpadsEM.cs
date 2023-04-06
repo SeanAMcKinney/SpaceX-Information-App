@@ -1,10 +1,10 @@
 ﻿namespace SpaceXDAL.EntityModles
 {
 
-    public class Landpads
-    {
-        public LandpadsEM[] Property1 { get; set; }
-    }
+    //public class Landpads
+    //{
+    //    public LandpadsEM[] Property1 { get; set; }
+    //}
 
     public class LandpadsEM
     {
