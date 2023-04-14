@@ -20,12 +20,15 @@ namespace SpaceXSL.CRUDServices
                 {
                     HttpResponseHeaders headers = response.Headers;
                     string eTag = headers.ETag.Tag;
+                    string json = await response.Content.ReadAsStringAsync();
                     string result = GetETagFromDb(endpointId);
-                    if (eTag == null || eTag != result)
+                    if (result == null)
                     {
-                        string json = await response.Content.ReadAsStringAsync();
-                        //Console.WriteLine(json);
-                        UpdateDB(endpointId, json, eTag);
+                        PostToDB(endpointId, json, eTag);
+                    }
+                    else if (eTag != result)
+                    {
+                        UpdateDB(json, eTag, endpointId);
                     }
                     else
                     {
@@ -43,7 +46,7 @@ namespace SpaceXSL.CRUDServices
 
         // POST
 
-        public static void UpdateDB(int endpointId, string json, string eTag)
+        public static void PostToDB(int endpointId, string json, string eTag)
         {
             ADO_Commands post = new ADO_Commands();
             post.InsertEndpointIdAndJsonStringAndETag(endpointId, json, eTag);
@@ -55,6 +58,13 @@ namespace SpaceXSL.CRUDServices
             ADO_Commands get = new ADO_Commands();
             string result = get.RetrieveETag(endpointId);
             return result;
+        }
+
+        // UPDATE
+        public static void UpdateDB(string json, string eTag, int endpointId)
+        {
+            ADO_Commands update = new ADO_Commands();
+            update.UpdateJsonAndETag(json, eTag, endpointId);
         }
 
     }

@@ -3,7 +3,6 @@ using SpaceXDAL.ADO.HelperClasses;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Net;
 
 namespace SpaceXDAL.ADO
 {
@@ -26,7 +25,7 @@ namespace SpaceXDAL.ADO
                         cmd.Parameters.Add(new SqlParameter("@ETag", eTag));
 
                         cnn.Open();
-                        RowsAffected = cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }
@@ -39,18 +38,20 @@ namespace SpaceXDAL.ADO
 
         public string RetrieveETag(int endpointId)
         {
-            string sql = "SELECT ETag FROM [dbo].[SpaceX_Endpoint_JSON] WHERE Endpoint_ID = " + $"{endpointId}";
+            string sql = "SELECT ETag FROM [dbo].[SpaceX_Endpoint_JSON] WHERE Endpoint_ID = @Endpoint_ID";
             try
             {
                 using (SqlConnection cnn = new SqlConnection(AppSettings.ConnectionString))
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, cnn))
                     {
+                        cmd.Parameters.Add(new SqlParameter("@Endpoint_ID", endpointId));
+
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = sql;
 
                         cnn.Open();
-                        RowsAffected = cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
                         string result = (string)cmd.ExecuteScalar();
                         return result;
@@ -63,15 +64,34 @@ namespace SpaceXDAL.ADO
                 return ResultText;
             }
         }
+
+        public void UpdateJsonAndETag(string json, string eTag, int endpointId)
+        {
+            string sql = "UPDATE [dbo].[SpaceX_Endpoint_JSON] SET Endpoint_JSON = @Endpoint_JSON, ETag = @Etag WHERE Endpoint_ID = @Endpoint_ID";
+
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(AppSettings.ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                    {
+                        cmd.Parameters.Add(new SqlParameter("@Endpoint_JSON", json));
+                        cmd.Parameters.Add(new SqlParameter("@ETag", eTag));
+                        cmd.Parameters.Add(new SqlParameter("@Endpoint_ID", endpointId));
+
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = sql;
+
+                        cnn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ResultText = ex.ToString();
+                Console.WriteLine(ResultText);
+            }
+        }
     }
 }
-
-
-//if (eTag == null || sql != eTag)
-//{
-//    return false;
-//}
-//else
-//{
-//    return true;
-//}
