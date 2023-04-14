@@ -9,7 +9,7 @@ namespace SpaceXSL.Service_Actions
         public void CallApiAndPostFetchedData()
         {
             RowsAffected = 0;
-            foreach (KeyValuePair<int, string> item in SpaceXApiEndpointDictionaryHelper.GetDictionary())
+            foreach (KeyValuePair<int, string> item in SpaceXApiEndpointDictionary.GetDictionary())
             {
                 int endpointId = item.Key;
                 string name = item.Value;

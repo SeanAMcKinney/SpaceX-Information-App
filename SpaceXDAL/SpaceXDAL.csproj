@@ -104,10 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADO\ADO_Commands.cs" />
-    <Compile Include="ADO\EndpointName.cs" />
     <Compile Include="ADO\Components\AppSettings.cs" />
     <Compile Include="ADO\HelperClasses\RowsAffectedHelper.cs" />
-    <Compile Include="ADO\HelperClasses\SpaceXApiEndpointDictionaryHelper.cs" />
+    <Compile Include="ADO\HelperClasses\SpaceXApiEndpointDictionary.cs" />
     <Compile Include="ADO\SqlDataAccess.cs" />
     <Compile Include="Entity Models\CapsulesEM.cs" />
     <Compile Include="Entity Models\CompanyEM.cs" />

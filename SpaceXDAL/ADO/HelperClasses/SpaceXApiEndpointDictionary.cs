@@ -2,7 +2,7 @@
 
 namespace SpaceXDAL.ADO.HelperClasses
 {
-    public class SpaceXApiEndpointDictionaryHelper
+    public class SpaceXApiEndpointDictionary
     {
         public static Dictionary<int, string> GetDictionary()
         {
