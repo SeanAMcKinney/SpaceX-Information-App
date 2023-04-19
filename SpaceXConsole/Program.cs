@@ -6,8 +6,8 @@ namespace SpaceXConsole
     {
         static void Main(string[] args)
         {
-            Actions actions = new Actions();
-            actions.CallApiAndPostFetchedData();
+            Actions action = new Actions();
+            action.RunAPITimeUpdateCheck();
         }
     }
 }

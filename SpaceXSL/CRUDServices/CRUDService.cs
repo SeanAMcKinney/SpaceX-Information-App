@@ -55,8 +55,8 @@ namespace SpaceXSL.CRUDServices
         // GET
         public static string GetETagFromDb(int endpointId)
         {
-            ADO_Commands get = new ADO_Commands();
-            string result = get.RetrieveETag(endpointId);
+            ADO_Commands getEtag = new ADO_Commands();
+            string result = getEtag.RetrieveETag(endpointId);
             return result;
         }
 
