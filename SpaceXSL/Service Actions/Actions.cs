@@ -30,7 +30,7 @@ namespace SpaceXSL.Service_Actions
         public void RunAPITimeUpdateCheck()
         {
             DateTime now = DateTime.Now.AddDays(-1);
-            DateTime lastUpdated = new DateTime();
+            var lastUpdated = new DateTime();
             ADO_Commands? getLastUpdate = new ADO_Commands();
             lastUpdated = getLastUpdate.RetrieveLastUpdated();
             int compare = DateTime.Compare(lastUpdated, now);
@@ -49,6 +49,15 @@ namespace SpaceXSL.Service_Actions
             {
                 Console.WriteLine("SpaceX API Information is up to date.");
             }
+        }
+
+        public static string GetJson(int endpointId)
+        {
+            string? json = "";
+            ADO_Commands getJson = new ADO_Commands();
+            json = getJson.RetrieveJson(endpointId);
+
+            return json;
         }
     }
 }

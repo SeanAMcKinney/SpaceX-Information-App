@@ -65,6 +65,35 @@ namespace SpaceXDAL.ADO
             }
         }
 
+        public string RetrieveJson(int endpointId)
+        {
+            string sql = "SELECT Endpoint_JSON FROM [dbo].[SpaceX_Endpoint_JSON] WHERE Endpoint_ID = @Endpoint_ID";
+            try
+            {
+                using (SqlConnection cnn = new SqlConnection(AppSettings.ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                    {
+                        cmd.Parameters.Add(new SqlParameter("@Endpoint_ID", endpointId));
+
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = sql;
+
+                        cnn.Open();
+                        cmd.ExecuteNonQuery();
+
+                        string result = (string)cmd.ExecuteScalar();
+                        return result;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ResultText = ex.ToString();
+                return ResultText;
+            }
+        }
+
         public DateTime RetrieveLastUpdated()
         {
             string sql = "SELECT Last_Updated FROM [dbo].[SpaceX_Endpoint_JSON] WHERE Endpoint_ID = @Endpoint_ID";
