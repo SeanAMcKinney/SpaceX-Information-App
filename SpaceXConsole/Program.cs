@@ -18,7 +18,7 @@ namespace SpaceXConsole
             // Mapper tests
 
             string crewJson = Actions.GetJson(1);
-            List<CrewEM> crewEM = JsonConvert.DeserializeObject<List<CrewEM>>(crewJson);
+            List<CrewEM>? crewEM = JsonConvert.DeserializeObject<List<CrewEM>>(crewJson);
             foreach (var crew in crewEM)
             {
                 Console.WriteLine($"Name: {crew.name}\n" +
@@ -28,12 +28,8 @@ namespace SpaceXConsole
                     $"ID: {crew.id}\n\n");
             }
 
-            CrewEM crewObj = new();
-            var mapper = ObjectMapperConfig.InitializeAutoMapper();
-            CrewDTO crewDTO = mapper.Map<CrewEM, CrewDTO>(crewObj);
-
-
-            List<CrewDTO> crewDto = JsonConvert.DeserializeObject<List<CrewDTO>>(crewJson);
+            
+            List<CrewDTO> crewDto = new();
             foreach (var crew in crewDto)
             {
                 Console.WriteLine($"****This is the CrewDTO****\n" +

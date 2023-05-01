@@ -21,8 +21,4 @@
     <ProjectReference Include="..\SpaceXDAL\SpaceXDAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SLMapper\" />
-  </ItemGroup>
-
 </Project>

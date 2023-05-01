@@ -7,19 +7,15 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddAuthentication(AuthenticationOptions =>
 {
     AuthenticationOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer();
-
-var configuration = new MapperConfiguration(cfg => cfg.CreateMap(typeof(Source<>), typeof(Destination<>)));
-builder.Services.AddAuthorization();
-builder.Services.AddAutoMapper(typeof(IConfiguration));
+});
+    //.AddJwtBearer();
 
 WebApplication app = builder.Build();
 // Middleware pipeline
-
 
 
 // Configure the HTTP request pipeline.
@@ -35,12 +31,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-app.UseAuthentication();
+//app.UseAuthorization();
+//app.UseAuthentication();
 
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}").RequireAuthorization();
+    pattern: "{controller=Home}/{action=Index}/{id?}");//.RequireAuthorization();
 
 app.Run();

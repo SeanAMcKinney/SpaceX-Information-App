@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXConsole", "SpaceXCons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXSL", "SpaceXSL\SpaceXSL.csproj", "{080A7427-84A1-4AD2-BEB8-3FEDF878F18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXUI", "SpaceXUI\SpaceXUI.csproj", "{35698826-08D0-4DAA-B4A2-7F6A3DABBBE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXUI", "SpaceXUI\SpaceXUI.csproj", "{35698826-08D0-4DAA-B4A2-7F6A3DABBBE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
